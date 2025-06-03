@@ -155,7 +155,7 @@ module.exports = {
         : [],
     },
     arbSepolia: {
-      url: 'https://sepolia-rollup.arbitrum.io/rpc',
+      url: process.env['ARB_SEPOLIA'],
       accounts: process.env['DEVNET_PRIVKEY']
         ? [process.env['DEVNET_PRIVKEY']]
         : [],

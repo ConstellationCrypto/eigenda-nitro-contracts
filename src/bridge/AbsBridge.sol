@@ -6,7 +6,7 @@ pragma solidity ^0.8.4;
 
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol";
-
+import {L1MessageType_ethDeposit} from "../libraries/MessageTypes.sol";
 import {
     NotContract,
     NotRollupOrOwner,
@@ -203,6 +203,9 @@ abstract contract AbsBridge is Initializable, DelegateCallAware, IBridge {
             baseFeeL1,
             blockTimestamp
         );
+        if (kind == L1MessageType_ethDeposit) {
+            emit DepositMessageDelivered(sender);
+        }
         return count;
     }
 
