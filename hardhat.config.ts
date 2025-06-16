@@ -131,7 +131,7 @@ module.exports = {
         : [],
     },
     sepolia: {
-      url: 'https://sepolia.infura.io/v3/' + process.env['INFURA_KEY'],
+      url: process.env['SEPOLIA'],
       accounts: process.env['DEVNET_PRIVKEY']
         ? [process.env['DEVNET_PRIVKEY']]
         : [],
