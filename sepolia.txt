@@ -1,0 +1,304 @@
+yarn install && yarn build && yarn build:forge && DEVNET_PRIVKEY= BASESCAN_API_KEY=8CMHQUJ1JNEZ271FZWXT8VRD4MK9V7VH3F ETHERSCAN_API_KEY=CBQKA3A3U5F9Z7T7A2FJS4IMW6MFBDC8HH ARBISCAN_API_KEY=VAQC4ZPAQGBRUMW8AR5CVAUKE96VNM2735 yarn deploy-factory --network sepolia
+yarn install v1.22.22
+warning package.json: License should be a valid SPDX license expression
+warning @eigenda/nitro-contracts@2.1.3-1: License should be a valid SPDX license expression
+[1/4] 🔍  Resolving packages...
+success Already up-to-date.
+$ patch-package
+patch-package 6.5.1
+Applying patches...
+No patch files found
+✨  Done in 0.33s.
+yarn run v1.22.22
+warning package.json: License should be a valid SPDX license expression
+$ hardhat compile
+Nothing to compile
+No need to generate any newer typings.
+✨  Done in 0.48s.
+yarn run v1.22.22
+warning package.json: License should be a valid SPDX license expression
+$ yarn build:forge:sol && yarn build:forge:yul
+warning package.json: License should be a valid SPDX license expression
+$ forge build --skip *.yul
+[⠊] Compiling...
+No files changed, compilation skipped
+warning package.json: License should be a valid SPDX license expression
+$ FOUNDRY_PROFILE=yul forge build --skip *.sol
+[⠊] Compiling...
+No files changed, compilation skipped
+✨  Done in 0.87s.
+yarn run v1.22.22
+warning package.json: License should be a valid SPDX license expression
+$ hardhat run scripts/deployment.ts --network sepolia
+Deploying contract EigenDA x Arbitrum Bridge
+Sent transaction: 0x64f7483fa458e7607557ba17abaf8d45465a67094ce01323414fc1bb7272ed46
+* New Bridge created at address: 0xB7064d64cc488c4B403219FE5A18d842E4e8AF2a
+Successfully submitted source code for contract
+src/bridge/Bridge.sol:Bridge at 0xB7064d64cc488c4B403219FE5A18d842E4e8AF2a
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract Bridge on the block explorer.
+https://sepolia.etherscan.io/address/0xB7064d64cc488c4B403219FE5A18d842E4e8AF2a#code
+
+Verified contract Bridge successfully.
+Sent transaction: 0x20a99baeb22706e89a352b1f01276ad0ccced10f4af4c650c408a2dcbcdc66f3
+Deploying contract EigenDA x Arbitrum SequencerInbox
+Sent transaction: 0x77d0c8f3fcca7522f8746b356acd7c49943d48ed196c1e218049acdacbbdfca0
+* New SequencerInbox created at address: 0xcB0a21F4d5115c4E35a80f31903492f9295E42CA 117964 0xFCBAA84c4bBDEF7FF3BF7d15919447D79F192079 false
+Successfully submitted source code for contract
+src/bridge/SequencerInbox.sol:SequencerInbox at 0xcB0a21F4d5115c4E35a80f31903492f9295E42CA
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract SequencerInbox on the block explorer.
+https://sepolia.etherscan.io/address/0xcB0a21F4d5115c4E35a80f31903492f9295E42CA#code
+
+Verified contract SequencerInbox successfully.
+Deploying contract EigenDA x Arbitrum Inbox
+Sent transaction: 0xfe4b9e68db5b984586bcad7c3adc7adda54bbf3fcb0278a8be3c2a1e77e84c51
+* New Inbox created at address: 0x095Cb8d9ef2042e4628237754d0AcF466FbedbCA 117964
+Successfully submitted source code for contract
+src/bridge/Inbox.sol:Inbox at 0x095Cb8d9ef2042e4628237754d0AcF466FbedbCA
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract Inbox on the block explorer.
+https://sepolia.etherscan.io/address/0x095Cb8d9ef2042e4628237754d0AcF466FbedbCA#code
+
+Verified contract Inbox successfully.
+Deploying contract EigenDA x Arbitrum RollupEventInbox
+Sent transaction: 0xb841cb8440e0767446ceec515f5c9a65c4563f8b57b13b2aa309a1f1d488e69b
+* New RollupEventInbox created at address: 0x6Ed9997D1b9Cabe17552C6E017916046356777E8
+Successfully submitted source code for contract
+src/rollup/RollupEventInbox.sol:RollupEventInbox at 0x6Ed9997D1b9Cabe17552C6E017916046356777E8
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract RollupEventInbox on the block explorer.
+https://sepolia.etherscan.io/address/0x6Ed9997D1b9Cabe17552C6E017916046356777E8#code
+
+Verified contract RollupEventInbox successfully.
+Deploying contract EigenDA x Arbitrum Outbox
+Sent transaction: 0xf02207651a2b30909a221b64fa7ac463b89f8a76767bf2522cb33f43c5a75cd0
+* New Outbox created at address: 0xb98434788118cdCd8E67D73BfeB116A6aDfC6e7D
+Successfully submitted source code for contract
+src/bridge/Outbox.sol:Outbox at 0xb98434788118cdCd8E67D73BfeB116A6aDfC6e7D
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract Outbox on the block explorer.
+https://sepolia.etherscan.io/address/0xb98434788118cdCd8E67D73BfeB116A6aDfC6e7D#code
+
+Verified contract Outbox successfully.
+Deploying contract EigenDA x Arbitrum ERC20Bridge
+Sent transaction: 0x93e0288ff7e2a26893a0661dc4873f33eff147202cc023ee05354b7431dd0014
+* New ERC20Bridge created at address: 0x7918b46F7c00143eE3a90E1A21902783A0b6E8F2
+Successfully submitted source code for contract
+src/bridge/ERC20Bridge.sol:ERC20Bridge at 0x7918b46F7c00143eE3a90E1A21902783A0b6E8F2
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract ERC20Bridge on the block explorer.
+https://sepolia.etherscan.io/address/0x7918b46F7c00143eE3a90E1A21902783A0b6E8F2#code
+
+Verified contract ERC20Bridge successfully.
+Deploying contract EigenDA x Arbitrum SequencerInbox
+Sent transaction: 0xe8ba9af93c7423fe444133cada0be0123dda40cacfdd58fddf2ac96fb72dc955
+* New SequencerInbox created at address: 0xCa8B441F5320f128E3aD696d24A41A1010404536 117964 0xFCBAA84c4bBDEF7FF3BF7d15919447D79F192079 true
+Successfully submitted source code for contract
+src/bridge/SequencerInbox.sol:SequencerInbox at 0xCa8B441F5320f128E3aD696d24A41A1010404536
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract SequencerInbox on the block explorer.
+https://sepolia.etherscan.io/address/0xCa8B441F5320f128E3aD696d24A41A1010404536#code
+
+Verified contract SequencerInbox successfully.
+Deploying contract EigenDA x Arbitrum ERC20Inbox
+Sent transaction: 0xf7cfa9860daec1134f769644dc64e055c1f5ae03bdee5cd87d9b9b504770eb51
+* New ERC20Inbox created at address: 0x7F509c3Bb55C9fc8F402a04aaA1AaD84075f836d 117964
+Successfully submitted source code for contract
+src/bridge/ERC20Inbox.sol:ERC20Inbox at 0x7F509c3Bb55C9fc8F402a04aaA1AaD84075f836d
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract ERC20Inbox on the block explorer.
+https://sepolia.etherscan.io/address/0x7F509c3Bb55C9fc8F402a04aaA1AaD84075f836d#code
+
+Verified contract ERC20Inbox successfully.
+Deploying contract EigenDA x Arbitrum ERC20RollupEventInbox
+Sent transaction: 0x1cfb6bd808f22d2cff922e03ff6762405f921be987146cbb4bf55c07619fd8ef
+* New ERC20RollupEventInbox created at address: 0xb7e45c69C9590F9bb0a510F0a9938C33E56aAe39
+Successfully submitted source code for contract
+src/rollup/ERC20RollupEventInbox.sol:ERC20RollupEventInbox at 0xb7e45c69C9590F9bb0a510F0a9938C33E56aAe39
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract ERC20RollupEventInbox on the block explorer.
+https://sepolia.etherscan.io/address/0xb7e45c69C9590F9bb0a510F0a9938C33E56aAe39#code
+
+Verified contract ERC20RollupEventInbox successfully.
+Deploying contract EigenDA x Arbitrum ERC20Outbox
+Sent transaction: 0x59a20341033e15b1b2fd5b2e1d6b7e10fed2f3f7da802a8d5f337dbada888459
+* New ERC20Outbox created at address: 0x4Bfb01E8eae2f9300E0D14f3aD1d3C15AF784ABe
+Successfully submitted source code for contract
+src/bridge/ERC20Outbox.sol:ERC20Outbox at 0x4Bfb01E8eae2f9300E0D14f3aD1d3C15AF784ABe
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract ERC20Outbox on the block explorer.
+https://sepolia.etherscan.io/address/0x4Bfb01E8eae2f9300E0D14f3aD1d3C15AF784ABe#code
+
+Verified contract ERC20Outbox successfully.
+Deploying contract EigenDA x Arbitrum BridgeCreator
+Sent transaction: 0x34278a76396e5fee801510f885fd5cfbe7d0da033e006597208377b20c6b2581
+* New BridgeCreator created at address: 0x0A05273002061756BE7B480a4CD73Aef42723e60 0xB7064d64cc488c4B403219FE5A18d842E4e8AF2a,0xcB0a21F4d5115c4E35a80f31903492f9295E42CA,0x095Cb8d9ef2042e4628237754d0AcF466FbedbCA,0x6Ed9997D1b9Cabe17552C6E017916046356777E8,0xb98434788118cdCd8E67D73BfeB116A6aDfC6e7D 0x7918b46F7c00143eE3a90E1A21902783A0b6E8F2,0xCa8B441F5320f128E3aD696d24A41A1010404536,0x7F509c3Bb55C9fc8F402a04aaA1AaD84075f836d,0xb7e45c69C9590F9bb0a510F0a9938C33E56aAe39,0x4Bfb01E8eae2f9300E0D14f3aD1d3C15AF784ABe
+Successfully submitted source code for contract
+src/rollup/BridgeCreator.sol:BridgeCreator at 0x0A05273002061756BE7B480a4CD73Aef42723e60
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract BridgeCreator on the block explorer.
+https://sepolia.etherscan.io/address/0x0A05273002061756BE7B480a4CD73Aef42723e60#code
+
+Verified contract BridgeCreator successfully.
+Deploying contract EigenDA x Arbitrum OneStepProver0
+Sent transaction: 0xa5f3d8e265a1a392f6744057037870201cdebea83ef3ddb80882509aaeacdf52
+* New OneStepProver0 created at address: 0x0263bD76DC19559d221bb16b134b04D316AD2AEB
+Successfully submitted source code for contract
+src/osp/OneStepProver0.sol:OneStepProver0 at 0x0263bD76DC19559d221bb16b134b04D316AD2AEB
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract OneStepProver0 on the block explorer.
+https://sepolia.etherscan.io/address/0x0263bD76DC19559d221bb16b134b04D316AD2AEB#code
+
+Verified contract OneStepProver0 successfully.
+Deploying contract EigenDA x Arbitrum OneStepProverMemory
+Sent transaction: 0x4649d41a88e7a0cd8feb6976a20d2ecc444ce21d3349ba05ae84e536756f3db6
+* New OneStepProverMemory created at address: 0x4d101dC916028e066A2DDbfc44c5bbf8500bAE9D
+Successfully submitted source code for contract
+src/osp/OneStepProverMemory.sol:OneStepProverMemory at 0x4d101dC916028e066A2DDbfc44c5bbf8500bAE9D
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract OneStepProverMemory on the block explorer.
+https://sepolia.etherscan.io/address/0x4d101dC916028e066A2DDbfc44c5bbf8500bAE9D#code
+
+Verified contract OneStepProverMemory successfully.
+Deploying contract EigenDA x Arbitrum OneStepProverMath
+Sent transaction: 0x44fd7f1cd7b044843efd731fed54442b84a9001973bebef827aa26ae5f6ac745
+* New OneStepProverMath created at address: 0x0ecd71A487339404733fcA471b5521f5666b4127
+Successfully submitted source code for contract
+src/osp/OneStepProverMath.sol:OneStepProverMath at 0x0ecd71A487339404733fcA471b5521f5666b4127
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract OneStepProverMath on the block explorer.
+https://sepolia.etherscan.io/address/0x0ecd71A487339404733fcA471b5521f5666b4127#code
+
+Verified contract OneStepProverMath successfully.
+Deploying contract EigenDA x Arbitrum OneStepProverHostIo
+Sent transaction: 0x27658dfb682876c34ecc9efd03b6842514f16f51131214ec79cbd168532aea41
+* New OneStepProverHostIo created at address: 0x3206c96da93F3b35dAF1fd2f900c821B3597a487
+Successfully submitted source code for contract
+src/osp/OneStepProverHostIo.sol:OneStepProverHostIo at 0x3206c96da93F3b35dAF1fd2f900c821B3597a487
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract OneStepProverHostIo on the block explorer.
+https://sepolia.etherscan.io/address/0x3206c96da93F3b35dAF1fd2f900c821B3597a487#code
+
+Verified contract OneStepProverHostIo successfully.
+Deploying contract EigenDA x Arbitrum OneStepProofEntry
+Sent transaction: 0x626426fe4b817bdf6611645476b4e0788e99b3cd0fce41d1339fb53a55f1ef97
+* New OneStepProofEntry created at address: 0xE89A47c0FFA74A41f85Ce6dBA154B082520556a7 0x0263bD76DC19559d221bb16b134b04D316AD2AEB 0x4d101dC916028e066A2DDbfc44c5bbf8500bAE9D 0x0ecd71A487339404733fcA471b5521f5666b4127 0x3206c96da93F3b35dAF1fd2f900c821B3597a487
+Successfully submitted source code for contract
+src/osp/OneStepProofEntry.sol:OneStepProofEntry at 0xE89A47c0FFA74A41f85Ce6dBA154B082520556a7
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract OneStepProofEntry on the block explorer.
+https://sepolia.etherscan.io/address/0xE89A47c0FFA74A41f85Ce6dBA154B082520556a7#code
+
+Verified contract OneStepProofEntry successfully.
+Deploying contract EigenDA x Arbitrum ChallengeManager
+Sent transaction: 0x1f6980c813f801bd2cec15d0732ea9e6edeb6bcbd1ef09544a08919edbcc3ab2
+* New ChallengeManager created at address: 0x68C9EFe7d71DA98c907d07b592fA68B4d379748D
+Successfully submitted source code for contract
+src/challenge/ChallengeManager.sol:ChallengeManager at 0x68C9EFe7d71DA98c907d07b592fA68B4d379748D
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract ChallengeManager on the block explorer.
+https://sepolia.etherscan.io/address/0x68C9EFe7d71DA98c907d07b592fA68B4d379748D#code
+
+Verified contract ChallengeManager successfully.
+Deploying contract EigenDA x Arbitrum RollupAdminLogic
+Sent transaction: 0xedef68cd15f445d4738fbd392d7df61f251ef7f137b821893b47d5b8fcdba353
+* New RollupAdminLogic created at address: 0x6050991Da9010521207aBbc863234b36c71f445f
+Successfully submitted source code for contract
+src/rollup/RollupAdminLogic.sol:RollupAdminLogic at 0x6050991Da9010521207aBbc863234b36c71f445f
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract RollupAdminLogic on the block explorer.
+https://sepolia.etherscan.io/address/0x6050991Da9010521207aBbc863234b36c71f445f#code
+
+Verified contract RollupAdminLogic successfully.
+Deploying contract EigenDA x Arbitrum RollupUserLogic
+Sent transaction: 0x656b83fb3ea784f840b11805eba855be4ca5ed1f2025eacd5d62bb582cfe67af
+* New RollupUserLogic created at address: 0x91aCDa4082c8cFA6CAc5bAc58C07CC0Ca877edeC
+Successfully submitted source code for contract
+src/rollup/RollupUserLogic.sol:RollupUserLogic at 0x91aCDa4082c8cFA6CAc5bAc58C07CC0Ca877edeC
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract RollupUserLogic on the block explorer.
+https://sepolia.etherscan.io/address/0x91aCDa4082c8cFA6CAc5bAc58C07CC0Ca877edeC#code
+
+Verified contract RollupUserLogic successfully.
+Deploying contract EigenDA x Arbitrum UpgradeExecutor
+Sent transaction: 0xa78c409a36dc95af623f3b9ccc14aceed7ea1f373d05909a54fd78bebe6a3bcb
+Upgrade executor deployed at 0x2f266EbecBB4748aAb2934De068A74d900A2D5AD
+Deploying contract EigenDA x Arbitrum ValidatorUtils
+Sent transaction: 0x0621e4e2ce40d51ee3cb61595d644b2da4a0ebf87107a3d49d97ed44f4788122
+* New ValidatorUtils created at address: 0xA3441CF30D653E9971a87E5820262283CEC53a98
+Successfully submitted source code for contract
+src/rollup/ValidatorUtils.sol:ValidatorUtils at 0xA3441CF30D653E9971a87E5820262283CEC53a98
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract ValidatorUtils on the block explorer.
+https://sepolia.etherscan.io/address/0xA3441CF30D653E9971a87E5820262283CEC53a98#code
+
+Verified contract ValidatorUtils successfully.
+Deploying contract EigenDA x Arbitrum ValidatorWalletCreator
+Sent transaction: 0x92850023aa62736c9355f225eed2b2745518844273f7dac1f2e171a5a28a904b
+* New ValidatorWalletCreator created at address: 0x336Ecb9547623199Dc58c9828de5297373dA5B91
+Successfully submitted source code for contract
+src/rollup/ValidatorWalletCreator.sol:ValidatorWalletCreator at 0x336Ecb9547623199Dc58c9828de5297373dA5B91
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract ValidatorWalletCreator on the block explorer.
+https://sepolia.etherscan.io/address/0x336Ecb9547623199Dc58c9828de5297373dA5B91#code
+
+Verified contract ValidatorWalletCreator successfully.
+Deploying contract EigenDA x Arbitrum RollupCreator
+Sent transaction: 0x84673399be13b7f3d80b7ac5f1344b3164541321e55b0a559f1a2d2ddd30f389
+* New RollupCreator created at address: 0x01B8Ac192025725bdb084F6221638F5600e14669
+Successfully submitted source code for contract
+src/rollup/RollupCreator.sol:RollupCreator at 0x01B8Ac192025725bdb084F6221638F5600e14669
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract RollupCreator on the block explorer.
+https://sepolia.etherscan.io/address/0x01B8Ac192025725bdb084F6221638F5600e14669#code
+
+Verified contract RollupCreator successfully.
+Deploying contract EigenDA x Arbitrum DeployHelper
+Sent transaction: 0x572198158123db6e86148ef31f0395fe61052744dd38a66ee0fb85ce0677546b
+* New DeployHelper created at address: 0x604c2A54a3aEc09a5B35582EE47539CB2fED5C3D
+Successfully submitted source code for contract
+src/rollup/DeployHelper.sol:DeployHelper at 0x604c2A54a3aEc09a5B35582EE47539CB2fED5C3D
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract DeployHelper on the block explorer.
+https://sepolia.etherscan.io/address/0x604c2A54a3aEc09a5B35582EE47539CB2fED5C3D#code
+
+Verified contract DeployHelper successfully.
+Deploying contract EigenDA x Arbitrum RollupProxy
+Sent transaction: 0x04390e6a62d5b5445e7a8210aeff4c3dfe6eac086ade0d5f9a426127ee0e3cef
+* New RollupProxy created at address: 0x477Bd013f31Df812b3a4D5C6453BD60213B21267
+Successfully submitted source code for contract
+src/rollup/RollupProxy.sol:RollupProxy at 0x477Bd013f31Df812b3a4D5C6453BD60213B21267
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract RollupProxy on the block explorer.
+https://sepolia.etherscan.io/address/0x477Bd013f31Df812b3a4D5C6453BD60213B21267#code
+
+Verified contract RollupProxy successfully.
+Waiting for the Template to be set on the Rollup Creator
+Sent transaction: 0x5ea806fa77a1fe9e23070c8dc5b0b1987c6297df3f836f11b2284765f2403c1c
+Template is set on the Rollup Creator
+✨  Done in 1427.21s.

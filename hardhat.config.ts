@@ -131,7 +131,7 @@ module.exports = {
         : [],
     },
     sepolia: {
-      url: 'https://sepolia.infura.io/v3/' + process.env['INFURA_KEY'],
+      url: process.env['SEPOLIA'],
       accounts: process.env['DEVNET_PRIVKEY']
         ? [process.env['DEVNET_PRIVKEY']]
         : [],
@@ -155,7 +155,7 @@ module.exports = {
         : [],
     },
     arbSepolia: {
-      url: 'https://sepolia-rollup.arbitrum.io/rpc',
+      url: process.env['ARB_SEPOLIA'],
       accounts: process.env['DEVNET_PRIVKEY']
         ? [process.env['DEVNET_PRIVKEY']]
         : [],
@@ -179,7 +179,7 @@ module.exports = {
         : [],
     },
     baseSepolia: {
-      url: 'https://sepolia.base.org',
+      url: process.env['BASE_SEPOLIA'],
       accounts: process.env['DEVNET_PRIVKEY']
         ? [process.env['DEVNET_PRIVKEY']]
         : [],
