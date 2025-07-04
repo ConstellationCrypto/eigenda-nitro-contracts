@@ -1,0 +1,226 @@
+export MAX_DATA_SIZE=104857
+InoM4:eigenda-nitro-contracts inomurko$ MAX_DATA_SIZE=104857 yarn install && yarn build && yarn build:forge && DEVNET_PRIVKEY= BASESCAN_API_KEY=8CMHQUJ1JNEZ271FZWXT8VRD4MK9V7VH3F ETHERSCAN_API_KEY=CBQKA3A3U5F9Z7T7A2FJS4IMW6MFBDC8HH ARBISCAN_API_KEY=VAQC4ZPAQGBRUMW8AR5CVAUKE96VNM2735 yarn deploy-factory --network baseSepolia
+yarn install v1.22.22
+warning package.json: License should be a valid SPDX license expression
+warning @eigenda/nitro-contracts@2.1.3-1: License should be a valid SPDX license expression
+[1/4] 🔍  Resolving packages...
+success Already up-to-date.
+$ patch-package
+patch-package 6.5.1
+Applying patches...
+No patch files found
+✨  Done in 0.43s.
+yarn run v1.22.22
+warning package.json: License should be a valid SPDX license expression
+$ hardhat compile
+Nothing to compile
+No need to generate any newer typings.
+✨  Done in 0.52s.
+yarn run v1.22.22
+warning package.json: License should be a valid SPDX license expression
+$ yarn build:forge:sol && yarn build:forge:yul
+warning package.json: License should be a valid SPDX license expression
+$ forge build --skip *.yul
+[⠊] Compiling...
+No files changed, compilation skipped
+warning package.json: License should be a valid SPDX license expression
+$ FOUNDRY_PROFILE=yul forge build --skip *.sol
+[⠊] Compiling...
+No files changed, compilation skipped
+✨  Done in 0.95s.
+yarn run v1.22.22
+warning package.json: License should be a valid SPDX license expression
+$ hardhat run scripts/deployment.ts --network baseSepolia
+Deploying contract EigenDA x Arbitrum Bridge
+Sent transaction: 0x3f6ad5cc6576e5a08a9be363ade71d0633ec921d6527bec47084a97c744a76f8
+* New Bridge created at address: 0x0F76a34067bAA22149aAf7Fc2375F814E6f80bA7
+Verification for Bridge failed with the following error: The address 0x0F76a34067bAA22149aAf7Fc2375F814E6f80bA7 has no bytecode. Is the contract deployed to this network?
+The selected network is baseSepolia.
+Failed to send transaction: nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"name":"ProviderError","_stack":"ProviderError: nonce too low: next nonce 4097, tx nonce 4096\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=NONCE_EXPIRED, version=providers/5.7.2)
+Sent transaction: 0x1d8125d69e213ab13dbabcd443ed7cac3809323f606575a727b6769fb43d8949
+Deploying contract EigenDA x Arbitrum SequencerInbox
+Failed to send transaction: replacement fee too low [ See: https://links.ethers.org/v5-errors-REPLACEMENT_UNDERPRICED ] (error={"name":"ProviderError","_stack":"ProviderError: replacement transaction underpriced\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=REPLACEMENT_UNDERPRICED, version=providers/5.7.2)
+Failed to send transaction: nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"name":"ProviderError","_stack":"ProviderError: nonce too low: next nonce 4098, tx nonce 4097\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=NONCE_EXPIRED, version=providers/5.7.2)
+Sent transaction: 0x33e24cc1fe60273f6e8459c37a9a8d69758a014484f8c715b7d1aac418b7ad2a
+* New SequencerInbox created at address: 0xa38080a20B6459bFBb32588a6347ac4981912A74 104857 0xc7d0Ff3607E882AB877Eab8dF1c645469558a466 false
+Verification for SequencerInbox failed with the following error: The address 0xa38080a20B6459bFBb32588a6347ac4981912A74 has no bytecode. Is the contract deployed to this network?
+The selected network is baseSepolia.
+Deploying contract EigenDA x Arbitrum Inbox
+Failed to send transaction: nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"name":"ProviderError","_stack":"ProviderError: nonce too low: next nonce 4099, tx nonce 4098\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=NONCE_EXPIRED, version=providers/5.7.2)
+Sent transaction: 0x711928bfa912f7ced0bd75e41777e562fb8431a501d0fecbb8daa0955ffb49fc
+* New Inbox created at address: 0xd2f5Ee170Fb287171de1073a237cb6f12C631427 104857
+Verification for Inbox failed with the following error: The address 0xd2f5Ee170Fb287171de1073a237cb6f12C631427 has no bytecode. Is the contract deployed to this network?
+The selected network is baseSepolia.
+Deploying contract EigenDA x Arbitrum RollupEventInbox
+Failed to send transaction: nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"name":"ProviderError","_stack":"ProviderError: nonce too low: next nonce 4100, tx nonce 4099\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=NONCE_EXPIRED, version=providers/5.7.2)
+Sent transaction: 0x8b8b46ae000b503673c05cb469422cb86016020043161497c317a555593cda1b
+* New RollupEventInbox created at address: 0x7bae17fea95a98D2Dcde653D5aA792CeacdF0967
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Successfully submitted source code for contract
+src/rollup/RollupEventInbox.sol:RollupEventInbox at 0x7bae17fea95a98D2Dcde653D5aA792CeacdF0967
+for verification on the block explorer. Waiting for verification result...
+
+Contract RollupEventInbox is already verified.
+Deploying contract EigenDA x Arbitrum Outbox
+Sent transaction: 0x70fef319760324f78ee8a2bdb7e0866431f8bafb9c83376634d7b66905742ac6
+* New Outbox created at address: 0xaeaF55DF38123Fe5B487A3cd72A19193c68aFE60
+Verification for Outbox failed with the following error: The address 0xaeaF55DF38123Fe5B487A3cd72A19193c68aFE60 has no bytecode. Is the contract deployed to this network?
+The selected network is baseSepolia.
+Deploying contract EigenDA x Arbitrum ERC20Bridge
+Failed to send transaction: replacement fee too low [ See: https://links.ethers.org/v5-errors-REPLACEMENT_UNDERPRICED ] (error={"name":"ProviderError","_stack":"ProviderError: replacement transaction underpriced\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=REPLACEMENT_UNDERPRICED, version=providers/5.7.2)
+Sent transaction: 0xbe158d8c4960eb34e45140294a2e53cf8512966543fd7452f787422441455c46
+* New ERC20Bridge created at address: 0xfb3A4bB65E97B20098aac6Ec206c1e384E2202a3
+Successfully submitted source code for contract
+src/bridge/ERC20Bridge.sol:ERC20Bridge at 0xfb3A4bB65E97B20098aac6Ec206c1e384E2202a3
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract ERC20Bridge on the block explorer.
+https://sepolia.basescan.org/address/0xfb3A4bB65E97B20098aac6Ec206c1e384E2202a3#code
+
+Verified contract ERC20Bridge successfully.
+Deploying contract EigenDA x Arbitrum SequencerInbox
+Sent transaction: 0x927c9997840c088978d32836f65fa0d2411a61f53ea263e847a8363f8179bf57
+* New SequencerInbox created at address: 0x3376e474c8568D719aF6582761d7fDDeAc60824F 104857 0xc7d0Ff3607E882AB877Eab8dF1c645469558a466 true
+Verification for SequencerInbox failed with the following error: The address 0x3376e474c8568D719aF6582761d7fDDeAc60824F has no bytecode. Is the contract deployed to this network?
+The selected network is baseSepolia.
+Deploying contract EigenDA x Arbitrum ERC20Inbox
+Failed to send transaction: nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"name":"ProviderError","_stack":"ProviderError: nonce too low: next nonce 4104, tx nonce 4103\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=NONCE_EXPIRED, version=providers/5.7.2)
+Failed to send transaction: nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"name":"ProviderError","_stack":"ProviderError: nonce too low: next nonce 4104, tx nonce 4103\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=NONCE_EXPIRED, version=providers/5.7.2)
+Sent transaction: 0x8bd3e801ef171355ced2fae23e80d325ef8da445c802b6d8fd5f19f4017709d3
+* New ERC20Inbox created at address: 0xabB0A2dc2F08a2D804fC2c88CD40fa483f6c5Cb1 104857
+Verification for ERC20Inbox failed with the following error: The address 0xabB0A2dc2F08a2D804fC2c88CD40fa483f6c5Cb1 has no bytecode. Is the contract deployed to this network?
+The selected network is baseSepolia.
+Deploying contract EigenDA x Arbitrum ERC20RollupEventInbox
+Failed to send transaction: nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"name":"ProviderError","_stack":"ProviderError: nonce too low: next nonce 4105, tx nonce 4104\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=NONCE_EXPIRED, version=providers/5.7.2)
+Sent transaction: 0x68cbfc628d823b7b13d9b76e61dd178972072f4af7bcecbca6897dd08e1ffbe8
+* New ERC20RollupEventInbox created at address: 0xf905f98Bb579eb259fA7cAbc94A033c13d30728c
+Verification for ERC20RollupEventInbox failed with the following error: The address 0xf905f98Bb579eb259fA7cAbc94A033c13d30728c has no bytecode. Is the contract deployed to this network?
+The selected network is baseSepolia.
+Deploying contract EigenDA x Arbitrum ERC20Outbox
+Failed to send transaction: nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"name":"ProviderError","_stack":"ProviderError: nonce too low: next nonce 4106, tx nonce 4105\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=NONCE_EXPIRED, version=providers/5.7.2)
+Sent transaction: 0x8765b0cef36b9d4528313a096dd62e46e81c56ed6f4270fad128bb058a95422f
+* New ERC20Outbox created at address: 0x437B3C4FF14ed1e190B3C7d2a94b9f5a0aACF55e
+Successfully submitted source code for contract
+src/bridge/ERC20Outbox.sol:ERC20Outbox at 0x437B3C4FF14ed1e190B3C7d2a94b9f5a0aACF55e
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract ERC20Outbox on the block explorer.
+https://sepolia.basescan.org/address/0x437B3C4FF14ed1e190B3C7d2a94b9f5a0aACF55e#code
+
+Verified contract ERC20Outbox successfully.
+Deploying contract EigenDA x Arbitrum BridgeCreator
+Sent transaction: 0x9c853cfbfd62aa557285b477717d619037087f73454b2d4059f04a04170fa7c4
+* New BridgeCreator created at address: 0x124C5459Fbb214D086fEae49Ea21B621beA2025a 0x0F76a34067bAA22149aAf7Fc2375F814E6f80bA7,0xa38080a20B6459bFBb32588a6347ac4981912A74,0xd2f5Ee170Fb287171de1073a237cb6f12C631427,0x7bae17fea95a98D2Dcde653D5aA792CeacdF0967,0xaeaF55DF38123Fe5B487A3cd72A19193c68aFE60 0xfb3A4bB65E97B20098aac6Ec206c1e384E2202a3,0x3376e474c8568D719aF6582761d7fDDeAc60824F,0xabB0A2dc2F08a2D804fC2c88CD40fa483f6c5Cb1,0xf905f98Bb579eb259fA7cAbc94A033c13d30728c,0x437B3C4FF14ed1e190B3C7d2a94b9f5a0aACF55e
+Verification for BridgeCreator failed with the following error: The address 0x124C5459Fbb214D086fEae49Ea21B621beA2025a has no bytecode. Is the contract deployed to this network?
+The selected network is baseSepolia.
+Deploying contract EigenDA x Arbitrum OneStepProver0
+Failed to send transaction: replacement fee too low [ See: https://links.ethers.org/v5-errors-REPLACEMENT_UNDERPRICED ] (error={"name":"ProviderError","_stack":"ProviderError: replacement transaction underpriced\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=REPLACEMENT_UNDERPRICED, version=providers/5.7.2)
+Failed to send transaction: nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"name":"ProviderError","_stack":"ProviderError: nonce too low: next nonce 4108, tx nonce 4107\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=NONCE_EXPIRED, version=providers/5.7.2)
+Sent transaction: 0x41f4dee92e1059105ee41844cd55e209f1eb576d9ff31868993016b5cf2fdbb5
+* New OneStepProver0 created at address: 0x374E86523188d474fa840878B91b518293971fE7
+Verification for OneStepProver0 failed with the following error: The address 0x374E86523188d474fa840878B91b518293971fE7 has no bytecode. Is the contract deployed to this network?
+The selected network is baseSepolia.
+Deploying contract EigenDA x Arbitrum OneStepProverMemory
+Failed to send transaction: nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"name":"ProviderError","_stack":"ProviderError: nonce too low: next nonce 4109, tx nonce 4108\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=NONCE_EXPIRED, version=providers/5.7.2)
+Sent transaction: 0x21bb0d2a79b59e99d8d0985c6bb2d3c80fcb12ebd100310bc7e58dd3c5e1c0e7
+* New OneStepProverMemory created at address: 0x961acC9Bc91DA47F3A56F2D551Ba2E80073F4261
+Verification for OneStepProverMemory failed with the following error: The address 0x961acC9Bc91DA47F3A56F2D551Ba2E80073F4261 has no bytecode. Is the contract deployed to this network?
+The selected network is baseSepolia.
+Deploying contract EigenDA x Arbitrum OneStepProverMath
+Failed to send transaction: nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"name":"ProviderError","_stack":"ProviderError: nonce too low: next nonce 4110, tx nonce 4109\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=NONCE_EXPIRED, version=providers/5.7.2)
+Sent transaction: 0x16420dd0cf27c2139a6af5efb55448d76c4b166e05ed8cece26f69dc17db1900
+* New OneStepProverMath created at address: 0xaF79D0395501857F3B8E168b28A4Bd149e8F2ea1
+Successfully submitted source code for contract
+src/osp/OneStepProverMath.sol:OneStepProverMath at 0xaF79D0395501857F3B8E168b28A4Bd149e8F2ea1
+for verification on the block explorer. Waiting for verification result...
+
+Contract OneStepProverMath is already verified.
+Deploying contract EigenDA x Arbitrum OneStepProverHostIo
+Sent transaction: 0x42c4312d3deb23f34268adeceda960e3ef693a62c297e9bb30cee9a883220ddf
+* New OneStepProverHostIo created at address: 0x11b87C67e67D37d39c21DDB75D54C76237023323
+Verification for OneStepProverHostIo failed with the following error: The address 0x11b87C67e67D37d39c21DDB75D54C76237023323 has no bytecode. Is the contract deployed to this network?
+The selected network is baseSepolia.
+Deploying contract EigenDA x Arbitrum OneStepProofEntry
+Failed to send transaction: replacement fee too low [ See: https://links.ethers.org/v5-errors-REPLACEMENT_UNDERPRICED ] (error={"name":"ProviderError","_stack":"ProviderError: replacement transaction underpriced\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=REPLACEMENT_UNDERPRICED, version=providers/5.7.2)
+Sent transaction: 0xdf0c8d63a0349e8027e4abf20bd9b37addbc4ea1829be0d46e72743a37906e38
+* New OneStepProofEntry created at address: 0x607f213614a5ce30a94ECB20f63e795aDc836392 0x374E86523188d474fa840878B91b518293971fE7 0x961acC9Bc91DA47F3A56F2D551Ba2E80073F4261 0xaF79D0395501857F3B8E168b28A4Bd149e8F2ea1 0x11b87C67e67D37d39c21DDB75D54C76237023323
+Successfully submitted source code for contract
+src/osp/OneStepProofEntry.sol:OneStepProofEntry at 0x607f213614a5ce30a94ECB20f63e795aDc836392
+for verification on the block explorer. Waiting for verification result...
+
+Contract OneStepProofEntry is already verified.
+Deploying contract EigenDA x Arbitrum ChallengeManager
+Sent transaction: 0x4d41a38e692634c5c8c3f64fc8148661d3b6be37ac4787e812a245eac77eb726
+* New ChallengeManager created at address: 0x1c0B4CC27b7B265D70f584407fDbB33a79f0691b
+Verification for ChallengeManager failed with the following error: The address 0x1c0B4CC27b7B265D70f584407fDbB33a79f0691b has no bytecode. Is the contract deployed to this network?
+The selected network is baseSepolia.
+Deploying contract EigenDA x Arbitrum RollupAdminLogic
+Failed to send transaction: nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"name":"ProviderError","_stack":"ProviderError: nonce too low: next nonce 4114, tx nonce 4113\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=NONCE_EXPIRED, version=providers/5.7.2)
+Sent transaction: 0x709f11c632343c22b942a6cf89f96a544113aab98b3f0ea88d461a5beddb10e2
+* New RollupAdminLogic created at address: 0x08Eb745B69137E5f1efb33Bc31775abfC730821a
+Verification for RollupAdminLogic failed with the following error: The address 0x08Eb745B69137E5f1efb33Bc31775abfC730821a has no bytecode. Is the contract deployed to this network?
+The selected network is baseSepolia.
+Deploying contract EigenDA x Arbitrum RollupUserLogic
+Failed to send transaction: nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"name":"ProviderError","_stack":"ProviderError: nonce too low: next nonce 4115, tx nonce 4114\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=NONCE_EXPIRED, version=providers/5.7.2)
+Sent transaction: 0x882fe6e53dcb0d5d21882ff4adab1ed97f2961633098fa903931bdfe207d6e9a
+* New RollupUserLogic created at address: 0xb586EdA42422d1FF307BbC0E278D6136B2cb56e5
+Verification for RollupUserLogic failed with the following error: The address 0xb586EdA42422d1FF307BbC0E278D6136B2cb56e5 has no bytecode. Is the contract deployed to this network?
+The selected network is baseSepolia.
+Deploying contract EigenDA x Arbitrum UpgradeExecutor
+Failed to send transaction: nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"name":"ProviderError","_stack":"ProviderError: nonce too low: next nonce 4116, tx nonce 4115\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=NONCE_EXPIRED, version=providers/5.7.2)
+Sent transaction: 0x10dd23589b0f584f547c312b69bf7e85831979370f5cc643ab39068ab238accf
+Upgrade executor deployed at 0xc7e33E1eFC8C91ED923053fB885195Df6c64aeB0
+Deploying contract EigenDA x Arbitrum ValidatorUtils
+Failed to send transaction: replacement fee too low [ See: https://links.ethers.org/v5-errors-REPLACEMENT_UNDERPRICED ] (error={"name":"ProviderError","_stack":"ProviderError: replacement transaction underpriced\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=REPLACEMENT_UNDERPRICED, version=providers/5.7.2)
+Failed to send transaction: nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"name":"ProviderError","_stack":"ProviderError: nonce too low: next nonce 4117, tx nonce 4116\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=NONCE_EXPIRED, version=providers/5.7.2)
+Sent transaction: 0x8f0e1b1ab8c4daf17fa6c78130d2854fcb639c0f46655f755164be2e42ce4607
+* New ValidatorUtils created at address: 0x4B655Aad47c3821736385965bF521d00d23BD730
+Verification for ValidatorUtils failed with the following error: The address 0x4B655Aad47c3821736385965bF521d00d23BD730 has no bytecode. Is the contract deployed to this network?
+The selected network is baseSepolia.
+Deploying contract EigenDA x Arbitrum ValidatorWalletCreator
+Failed to send transaction: nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"name":"ProviderError","_stack":"ProviderError: nonce too low: next nonce 4118, tx nonce 4117\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=NONCE_EXPIRED, version=providers/5.7.2)
+Sent transaction: 0xcbdac45713f68063759aa62ce0766116a01403d6fb48d117b3fe83eb94970644
+* New ValidatorWalletCreator created at address: 0x3914295870F4F1B8893d802F96BAD7f8067405b8
+Verification for ValidatorWalletCreator failed with the following error: The address 0x3914295870F4F1B8893d802F96BAD7f8067405b8 has no bytecode. Is the contract deployed to this network?
+The selected network is baseSepolia.
+Deploying contract EigenDA x Arbitrum RollupCreator
+Failed to send transaction: nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"name":"ProviderError","_stack":"ProviderError: nonce too low: next nonce 4119, tx nonce 4118\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=NONCE_EXPIRED, version=providers/5.7.2)
+Sent transaction: 0xdc11ecd1875df70c705756d295097d0850c368fd5a5a3980d0cca29d4918c0b3
+* New RollupCreator created at address: 0x361643108D23Ad8114d9Dc1Fa4145E5bEb52A948
+Successfully submitted source code for contract
+src/rollup/RollupCreator.sol:RollupCreator at 0x361643108D23Ad8114d9Dc1Fa4145E5bEb52A948
+for verification on the block explorer. Waiting for verification result...
+
+Contract RollupCreator is already verified.
+Deploying contract EigenDA x Arbitrum DeployHelper
+Sent transaction: 0x4d01866097761607f134dc674d4a861a20687b63bd4c587d91fb99ba422e63ea
+* New DeployHelper created at address: 0x3afa9d3f15013BC1E56489bdf851617C85859Dc4
+Verification for DeployHelper failed with the following error: The address 0x3afa9d3f15013BC1E56489bdf851617C85859Dc4 has no bytecode. Is the contract deployed to this network?
+The selected network is baseSepolia.
+Deploying contract EigenDA x Arbitrum RollupProxy
+Failed to send transaction: nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"name":"ProviderError","_stack":"ProviderError: nonce too low: next nonce 4121, tx nonce 4120\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=NONCE_EXPIRED, version=providers/5.7.2)
+Sent transaction: 0xbbf1c622522f6023976219e353566941cbd2d0e8a3f514ff563542f8379edaec
+* New RollupProxy created at address: 0xa3BD85F30b1570a3B7bD02b64cf9DE7754741597
+Verification for RollupProxy failed with the following error: The address 0xa3BD85F30b1570a3B7bD02b64cf9DE7754741597 has no bytecode. Is the contract deployed to this network?
+The selected network is baseSepolia.
+Waiting for the Template to be set on the Rollup Creator
+Failed to send transaction: nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"name":"ProviderError","_stack":"ProviderError: nonce too low: next nonce 4122, tx nonce 4121\n    at HttpProvider.request (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/hardhat/src/internal/core/providers/http.ts:96:21)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send (/Users/inomurko/opt/eigenda-nitro-contracts/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":-32000,"_isProviderError":true}, method="sendTransaction", transaction=undefined, code=NONCE_EXPIRED, version=providers/5.7.2)
+Sent transaction: 0xa48da0706a2bdef48ebbcc5c68dacac13f673385650d37de60702eafcdfb437a
+Template is set on the Rollup Creator
+✨  Done in 287.23s.

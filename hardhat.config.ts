@@ -179,7 +179,7 @@ module.exports = {
         : [],
     },
     baseSepolia: {
-      url: 'https://sepolia.base.org',
+      url: process.env['BASE_SEPOLIA'],
       accounts: process.env['DEVNET_PRIVKEY']
         ? [process.env['DEVNET_PRIVKEY']]
         : [],
